@@ -1,21 +1,48 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
-export interface HeroImageImage extends Schema.Component {
-  collectionName: 'components_hero_image_images';
+export interface SectionImageSectionImage extends Schema.Component {
+  collectionName: 'components_section_image_section_images';
   info: {
-    displayName: 'image';
+    displayName: 'section-image';
     description: '';
   };
   attributes: {
-    src: Attribute.Media;
     alt: Attribute.String;
+    src: Attribute.Media;
+  };
+}
+
+export interface TechnologyVeteranTechnology extends Schema.Component {
+  collectionName: 'components_technology_veteran_technologies';
+  info: {
+    displayName: 'veteran-technology';
+    description: '';
+  };
+  attributes: {
+    name: Attribute.String;
+    text: Attribute.Text;
+    image: Attribute.Component<'section-image.section-image'>;
+  };
+}
+
+export interface VeteranHelp extends Schema.Component {
+  collectionName: 'components_veteran_help_helps';
+  info: {
+    displayName: 'veteran-help';
+    description: '';
+  };
+  attributes: {
+    name: Attribute.String;
+    text: Attribute.Text;
   };
 }
 
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
-      'hero-image.image': HeroImageImage;
+      'section-image.section-image': SectionImageSectionImage;
+      'technology.veteran-technology': TechnologyVeteranTechnology;
+      'veteran.help': VeteranHelp;
     }
   }
 }

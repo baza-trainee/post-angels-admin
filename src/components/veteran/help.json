@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_veteran_help_helps",
+  "info": {
+    "displayName": "veteran-help",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    }
+  }
+}

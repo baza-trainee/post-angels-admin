@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_technology_veteran_technologies",
+  "info": {
+    "displayName": "veteran-technology",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "image": {
+      "type": "component",
+      "repeatable": false,
+      "component": "section-image.section-image"
+    }
+  }
+}
