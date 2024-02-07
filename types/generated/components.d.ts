@@ -54,10 +54,11 @@ export interface SocialLinkSocialLink extends Schema.Component {
   collectionName: 'components_social_link_social_links';
   info: {
     displayName: 'social-link';
+    description: '';
   };
   attributes: {
-    name: Attribute.String;
     link: Attribute.String;
+    name: Attribute.Enumeration<['instagram', 'facebook']>;
   };
 }
 
