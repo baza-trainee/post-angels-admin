@@ -992,7 +992,7 @@ export interface ApiPartnerPartner extends Schema.CollectionType {
           localized: true;
         };
       }>;
-    type: Attribute.Enumeration<['partner', 'volonter', 'veteran']> &
+    type: Attribute.Enumeration<['partner', 'volunteer', 'veteran']> &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1262,6 +1262,174 @@ export interface ApiSupportDataSupportData extends Schema.CollectionType {
   };
 }
 
+export interface ApiTeammateTeammate extends Schema.CollectionType {
+  collectionName: 'teammates';
+  info: {
+    singularName: 'teammate';
+    pluralName: 'teammates';
+    displayName: 'teammate';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    name: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    lastName: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    phone: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    email: Attribute.Email &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    image: Attribute.Component<'section-image.section-image'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::teammate.teammate',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::teammate.teammate',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::teammate.teammate',
+      'oneToMany',
+      'api::teammate.teammate'
+    >;
+    locale: Attribute.String;
+  };
+}
+
+export interface ApiVeteranVeteran extends Schema.CollectionType {
+  collectionName: 'veterans';
+  info: {
+    singularName: 'veteran';
+    pluralName: 'veterans';
+    displayName: 'Veteran';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    name: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    lastName: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    email: Attribute.Email &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    type: Attribute.Enumeration<['partner', 'volunteer', 'veteran ']> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Attribute.DefaultTo<'veteran '>;
+    status: Attribute.Enumeration<['new', 'approve']> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Attribute.DefaultTo<'new'>;
+    city: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    phone: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    document_id: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    asks: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::veteran.veteran',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::veteran.veteran',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::veteran.veteran',
+      'oneToMany',
+      'api::veteran.veteran'
+    >;
+    locale: Attribute.String;
+  };
+}
+
 export interface ApiVeteransHelpSectionVeteransHelpSection
   extends Schema.SingleType {
   collectionName: 'veterans_help_sections';
@@ -1397,7 +1565,7 @@ export interface ApiVolonterVolonter extends Schema.CollectionType {
   info: {
     singularName: 'volonter';
     pluralName: 'volonters';
-    displayName: 'volonter';
+    displayName: 'Volunteer';
     description: '';
   };
   options: {
@@ -1415,7 +1583,7 @@ export interface ApiVolonterVolonter extends Schema.CollectionType {
           localized: true;
         };
       }>;
-    type: Attribute.Enumeration<['volonter', 'veteran', 'partner']> &
+    type: Attribute.Enumeration<['volunteer', 'veteran', 'partner']> &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1521,6 +1689,8 @@ declare module '@strapi/types' {
       'api::partner.partner': ApiPartnerPartner;
       'api::project.project': ApiProjectProject;
       'api::support-data.support-data': ApiSupportDataSupportData;
+      'api::teammate.teammate': ApiTeammateTeammate;
+      'api::veteran.veteran': ApiVeteranVeteran;
       'api::veterans-help-section.veterans-help-section': ApiVeteransHelpSectionVeteransHelpSection;
       'api::veterans-technology-section.veterans-technology-section': ApiVeteransTechnologySectionVeteransTechnologySection;
       'api::volonter.volonter': ApiVolonterVolonter;

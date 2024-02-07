@@ -4,7 +4,7 @@
   "info": {
     "singularName": "volonter",
     "pluralName": "volonters",
-    "displayName": "volonter",
+    "displayName": "Volunteer",
     "description": ""
   },
   "options": {
@@ -32,7 +32,7 @@
       },
       "type": "enumeration",
       "enum": [
-        "volonter",
+        "volunteer",
         "veteran",
         "partner"
       ]

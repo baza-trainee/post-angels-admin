@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "partners",
+  "collectionName": "veterans",
   "info": {
-    "singularName": "partner",
-    "pluralName": "partners",
-    "displayName": "partner",
-    "description": ""
+    "singularName": "veteran",
+    "pluralName": "veterans",
+    "displayName": "Veteran"
   },
   "options": {
     "draftAndPublish": false
@@ -24,7 +23,7 @@
       },
       "type": "string"
     },
-    "partnerOrgTitle": {
+    "lastName": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -32,15 +31,14 @@
       },
       "type": "string"
     },
-    "partnerOrgLogo": {
-      "type": "component",
-      "repeatable": false,
+    "email": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "component": "section-image.section-image"
+      "type": "email",
+      "required": true
     },
     "type": {
       "pluginOptions": {
@@ -52,9 +50,9 @@
       "enum": [
         "partner",
         "volunteer",
-        "veteran"
+        "veteran "
       ],
-      "default": "partner"
+      "default": "veteran "
     },
     "status": {
       "pluginOptions": {
@@ -69,7 +67,7 @@
       ],
       "default": "new"
     },
-    "lastName": {
+    "city": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -83,49 +81,25 @@
           "localized": true
         }
       },
-      "type": "string"
-    },
-    "city": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string"
-    },
-    "EDRPOU": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string"
-    },
-    "supportMethods": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "enumeration",
-      "enum": [
-        "financialSupport",
-        "provisionServices",
-        "volunteerWork",
-        "promotionSupport",
-        "resourceMobilization",
-        "consultation",
-        "other"
-      ]
-    },
-    "email": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "email",
+      "type": "string",
       "required": true
+    },
+    "document_id": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true
+    },
+    "asks": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
     }
   }
 }
