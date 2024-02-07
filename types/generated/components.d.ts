@@ -1,5 +1,43 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface AboutUsAboutUs extends Schema.Component {
+  collectionName: 'components_about_us_about_uses';
+  info: {
+    displayName: 'about-us';
+    description: '';
+  };
+  attributes: {
+    name: Attribute.String;
+    measure: Attribute.String;
+    quantity: Attribute.BigInteger;
+    title: Attribute.String;
+  };
+}
+
+export interface ProjectDocumentDocument extends Schema.Component {
+  collectionName: 'components_project_document_documents';
+  info: {
+    displayName: 'document';
+  };
+  attributes: {
+    name: Attribute.String;
+    link: Attribute.String;
+    title: Attribute.String;
+  };
+}
+
+export interface ProjectOrganizerOrganizer extends Schema.Component {
+  collectionName: 'components_project_organizer_organizers';
+  info: {
+    displayName: 'organizer';
+    description: '';
+  };
+  attributes: {
+    name: Attribute.String;
+    image: Attribute.Component<'section-image.section-image'>;
+  };
+}
+
 export interface SectionImageSectionImage extends Schema.Component {
   collectionName: 'components_section_image_section_images';
   info: {
@@ -9,6 +47,17 @@ export interface SectionImageSectionImage extends Schema.Component {
   attributes: {
     alt: Attribute.String;
     src: Attribute.Media;
+  };
+}
+
+export interface SocialLinkSocialLink extends Schema.Component {
+  collectionName: 'components_social_link_social_links';
+  info: {
+    displayName: 'social-link';
+  };
+  attributes: {
+    name: Attribute.String;
+    link: Attribute.String;
   };
 }
 
@@ -40,7 +89,11 @@ export interface VeteranHelp extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'about-us.about-us': AboutUsAboutUs;
+      'project-document.document': ProjectDocumentDocument;
+      'project-organizer.organizer': ProjectOrganizerOrganizer;
       'section-image.section-image': SectionImageSectionImage;
+      'social-link.social-link': SocialLinkSocialLink;
       'technology.veteran-technology': TechnologyVeteranTechnology;
       'veteran.help': VeteranHelp;
     }

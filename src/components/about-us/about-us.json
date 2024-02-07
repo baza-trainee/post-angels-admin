@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_about_us_about_uses",
+  "info": {
+    "displayName": "about-us",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "measure": {
+      "type": "string"
+    },
+    "quantity": {
+      "type": "biginteger"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}
