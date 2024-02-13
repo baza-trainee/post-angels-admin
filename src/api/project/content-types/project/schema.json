@@ -139,6 +139,16 @@
         }
       },
       "component": "project-document.document"
+    },
+    "slug": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true,
+      "unique": true
     }
   }
 }
