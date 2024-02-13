@@ -975,6 +975,7 @@ export interface ApiPartnerPartner extends Schema.CollectionType {
   };
   attributes: {
     name: Attribute.String &
+      Attribute.Private &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1007,24 +1008,28 @@ export interface ApiPartnerPartner extends Schema.CollectionType {
       }> &
       Attribute.DefaultTo<'new'>;
     lastName: Attribute.String &
+      Attribute.Private &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
     phone: Attribute.String &
+      Attribute.Private &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
     city: Attribute.String &
+      Attribute.Private &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
     EDRPOU: Attribute.String &
+      Attribute.Private &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1048,6 +1053,7 @@ export interface ApiPartnerPartner extends Schema.CollectionType {
       }>;
     email: Attribute.Email &
       Attribute.Required &
+      Attribute.Private &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1299,12 +1305,14 @@ export interface ApiTeammateTeammate extends Schema.CollectionType {
         };
       }>;
     phone: Attribute.String &
+      Attribute.Private &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
     email: Attribute.Email &
+      Attribute.Private &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

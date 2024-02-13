@@ -22,7 +22,8 @@
           "localized": true
         }
       },
-      "type": "string"
+      "type": "string",
+      "private": true
     },
     "partnerOrgTitle": {
       "pluginOptions": {
@@ -75,7 +76,8 @@
           "localized": true
         }
       },
-      "type": "string"
+      "type": "string",
+      "private": true
     },
     "phone": {
       "pluginOptions": {
@@ -83,7 +85,8 @@
           "localized": true
         }
       },
-      "type": "string"
+      "type": "string",
+      "private": true
     },
     "city": {
       "pluginOptions": {
@@ -91,7 +94,8 @@
           "localized": true
         }
       },
-      "type": "string"
+      "type": "string",
+      "private": true
     },
     "EDRPOU": {
       "pluginOptions": {
@@ -99,7 +103,8 @@
           "localized": true
         }
       },
-      "type": "string"
+      "type": "string",
+      "private": true
     },
     "supportMethods": {
       "pluginOptions": {
@@ -125,7 +130,8 @@
         }
       },
       "type": "email",
-      "required": true
+      "required": true,
+      "private": true
     }
   }
 }
