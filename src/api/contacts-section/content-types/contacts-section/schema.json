@@ -34,7 +34,7 @@
       "type": "string",
       "required": true
     },
-    "adress": {
+    "address": {
       "pluginOptions": {
         "i18n": {
           "localized": true

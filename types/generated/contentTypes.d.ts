@@ -858,7 +858,7 @@ export interface ApiContactsSectionContactsSection extends Schema.SingleType {
           localized: true;
         };
       }>;
-    adress: Attribute.String &
+    address: Attribute.String &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
