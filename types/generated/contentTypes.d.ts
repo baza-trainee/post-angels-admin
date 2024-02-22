@@ -876,6 +876,12 @@ export interface ApiContactsSectionContactsSection extends Schema.SingleType {
           localized: true;
         };
       }>;
+    address_link: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
