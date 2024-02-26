@@ -1609,7 +1609,8 @@ export interface ApiVolonterVolonter extends Schema.CollectionType {
         i18n: {
           localized: true;
         };
-      }>;
+      }> &
+      Attribute.DefaultTo<'volunteer'>;
     status: Attribute.Enumeration<['new', 'approve']> &
       Attribute.SetPluginOptions<{
         i18n: {
@@ -1636,20 +1637,14 @@ export interface ApiVolonterVolonter extends Schema.CollectionType {
           localized: true;
         };
       }>;
-    activity: Attribute.String &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    DriversLicense: Attribute.Boolean &
+    volunteerCertificate: Attribute.Boolean &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }> &
       Attribute.DefaultTo<false>;
-    car: Attribute.Boolean &
+    carAvailability: Attribute.Boolean &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1658,6 +1653,34 @@ export interface ApiVolonterVolonter extends Schema.CollectionType {
       Attribute.DefaultTo<false>;
     email: Attribute.Email &
       Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    telegram: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    message: Attribute.Text &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    activity: Attribute.Enumeration<
+      [
+        'financialSupport',
+        'provisionServices',
+        'volunteerWork',
+        'promotionSupport',
+        'resourceMobilization',
+        'consultation',
+        'other'
+      ]
+    > &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
