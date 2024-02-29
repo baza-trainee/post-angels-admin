@@ -132,6 +132,14 @@
       "type": "email",
       "required": true,
       "private": true
+    },
+    "web_link": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
     }
   }
 }

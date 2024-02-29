@@ -1065,6 +1065,12 @@ export interface ApiPartnerPartner extends Schema.CollectionType {
           localized: true;
         };
       }>;
+    web_link: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
