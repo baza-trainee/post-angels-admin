@@ -1071,7 +1071,7 @@ export interface ApiPartnerPartner extends Schema.CollectionType {
           localized: true;
         };
       }>;
-    ourOffer: Attribute.String &
+    ourOffer: Attribute.Text &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
