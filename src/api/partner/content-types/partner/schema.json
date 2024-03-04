@@ -140,6 +140,14 @@
         }
       },
       "type": "string"
+    },
+    "ourOffer": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
     }
   }
 }
