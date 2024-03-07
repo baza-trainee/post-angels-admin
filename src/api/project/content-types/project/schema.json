@@ -82,9 +82,8 @@
           "localized": true
         }
       },
-      "type": "date",
-      "required": true,
-      "default": "2024-02-06"
+      "type": "datetime",
+      "required": true
     },
     "finishedDate": {
       "pluginOptions": {

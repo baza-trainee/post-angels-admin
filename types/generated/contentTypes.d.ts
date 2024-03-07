@@ -1161,14 +1161,13 @@ export interface ApiProjectProject extends Schema.CollectionType {
           localized: false;
         };
       }>;
-    startDate: Attribute.Date &
+    startDate: Attribute.DateTime &
       Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
-      }> &
-      Attribute.DefaultTo<'2024-02-06'>;
+      }>;
     finishedDate: Attribute.DateTime &
       Attribute.SetPluginOptions<{
         i18n: {
