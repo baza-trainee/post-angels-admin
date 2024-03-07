@@ -1134,7 +1134,7 @@ export interface ApiProjectProject extends Schema.CollectionType {
     image: Attribute.Component<'section-image.section-image'> &
       Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     conclusion: Attribute.Text &
@@ -1152,13 +1152,13 @@ export interface ApiProjectProject extends Schema.CollectionType {
     collected: Attribute.BigInteger &
       Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     all: Attribute.BigInteger &
       Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     startDate: Attribute.Date &
@@ -1169,10 +1169,10 @@ export interface ApiProjectProject extends Schema.CollectionType {
         };
       }> &
       Attribute.DefaultTo<'2024-02-06'>;
-    finishedDate: Attribute.Date &
+    finishedDate: Attribute.DateTime &
       Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     status: Attribute.Enumeration<['new', 'completed', 'archive']> &
@@ -1204,7 +1204,7 @@ export interface ApiProjectProject extends Schema.CollectionType {
       Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     createdAt: Attribute.DateTime;

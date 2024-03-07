@@ -39,7 +39,7 @@
       "repeatable": false,
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       },
       "component": "section-image.section-image"
@@ -63,7 +63,7 @@
     "collected": {
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       },
       "type": "biginteger"
@@ -71,7 +71,7 @@
     "all": {
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       },
       "type": "biginteger"
@@ -89,10 +89,10 @@
     "finishedDate": {
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       },
-      "type": "date"
+      "type": "datetime"
     },
     "status": {
       "pluginOptions": {
@@ -143,7 +143,7 @@
     "slug": {
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       },
       "type": "string",
