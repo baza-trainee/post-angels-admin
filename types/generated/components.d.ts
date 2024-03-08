@@ -18,11 +18,12 @@ export interface ProjectDocumentDocument extends Schema.Component {
   collectionName: 'components_project_document_documents';
   info: {
     displayName: 'document';
+    description: '';
   };
   attributes: {
     name: Attribute.String;
-    link: Attribute.String;
     title: Attribute.String;
+    href: Attribute.Media;
   };
 }
 

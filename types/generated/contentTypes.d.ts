@@ -1146,7 +1146,7 @@ export interface ApiProjectProject extends Schema.CollectionType {
     bunk_id: Attribute.String &
       Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     collected: Attribute.BigInteger &
@@ -1165,7 +1165,7 @@ export interface ApiProjectProject extends Schema.CollectionType {
       Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     finishedDate: Attribute.DateTime &
@@ -1177,7 +1177,7 @@ export interface ApiProjectProject extends Schema.CollectionType {
     status: Attribute.Enumeration<['new', 'completed', 'archive']> &
       Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }> &
       Attribute.DefaultTo<'new'>;
@@ -1190,13 +1190,13 @@ export interface ApiProjectProject extends Schema.CollectionType {
     socials: Attribute.Component<'social-link.social-link', true> &
       Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     document: Attribute.Component<'project-document.document', true> &
       Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     slug: Attribute.String &

@@ -1,18 +1,26 @@
 {
   "collectionName": "components_project_document_documents",
   "info": {
-    "displayName": "document"
+    "displayName": "document",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "name": {
       "type": "string"
     },
-    "link": {
-      "type": "string"
-    },
     "title": {
       "type": "string"
+    },
+    "href": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
     }
   }
 }

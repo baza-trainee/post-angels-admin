@@ -55,7 +55,7 @@
     "bunk_id": {
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       },
       "type": "string"
@@ -79,7 +79,7 @@
     "startDate": {
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       },
       "type": "datetime",
@@ -96,7 +96,7 @@
     "status": {
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       },
       "type": "enumeration",
@@ -123,7 +123,7 @@
       "repeatable": true,
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       },
       "component": "social-link.social-link"
@@ -134,7 +134,7 @@
       "repeatable": true,
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       },
       "component": "project-document.document"
