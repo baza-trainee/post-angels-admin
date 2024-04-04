@@ -4,7 +4,8 @@
   "info": {
     "singularName": "veteran",
     "pluralName": "veterans",
-    "displayName": "Veteran"
+    "displayName": "Veteran",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -84,15 +85,6 @@
       "type": "string",
       "required": true
     },
-    "document_id": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string",
-      "required": true
-    },
     "asks": {
       "pluginOptions": {
         "i18n": {
@@ -100,6 +92,22 @@
         }
       },
       "type": "string"
+    },
+    "document_id": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "warVeteran",
+        "combatantVeteran",
+        "warDisabled",
+        "warParticipant",
+        "actionsParticipation",
+        "other"
+      ]
     }
   }
 }

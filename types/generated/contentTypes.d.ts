@@ -1370,6 +1370,7 @@ export interface ApiVeteranVeteran extends Schema.CollectionType {
     singularName: 'veteran';
     pluralName: 'veterans';
     displayName: 'Veteran';
+    description: '';
   };
   options: {
     draftAndPublish: false;
@@ -1426,17 +1427,25 @@ export interface ApiVeteranVeteran extends Schema.CollectionType {
           localized: true;
         };
       }>;
-    document_id: Attribute.String &
-      Attribute.Required &
+    asks: Attribute.String &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    asks: Attribute.String &
+    document_id: Attribute.Enumeration<
+      [
+        'warVeteran',
+        'combatantVeteran',
+        'warDisabled',
+        'warParticipant',
+        'actionsParticipation',
+        'other'
+      ]
+    > &
       Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     createdAt: Attribute.DateTime;
