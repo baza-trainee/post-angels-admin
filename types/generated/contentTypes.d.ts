@@ -1308,6 +1308,7 @@ export interface ApiReportReport extends Schema.CollectionType {
   };
   attributes: {
     title: Attribute.String &
+      Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1326,6 +1327,7 @@ export interface ApiReportReport extends Schema.CollectionType {
         };
       }>;
     date: Attribute.Date &
+      Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: false;
