@@ -46,8 +46,8 @@ export interface SectionImageSectionImage extends Schema.Component {
     description: '';
   };
   attributes: {
-    alt: Attribute.String;
-    src: Attribute.Media;
+    alt: Attribute.String & Attribute.Required;
+    src: Attribute.Media & Attribute.Required;
   };
 }
 

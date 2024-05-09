@@ -1316,6 +1316,7 @@ export interface ApiTeammateTeammate extends Schema.CollectionType {
         };
       }>;
     lastName: Attribute.String &
+      Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
