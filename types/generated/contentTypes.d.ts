@@ -905,6 +905,67 @@ export interface ApiContactsSectionContactsSection extends Schema.SingleType {
   };
 }
 
+export interface ApiDocumentDocument extends Schema.CollectionType {
+  collectionName: 'documents';
+  info: {
+    singularName: 'document';
+    pluralName: 'documents';
+    displayName: 'Document';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    name: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
+    title: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    src: Attribute.Media &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::document.document',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::document.document',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::document.document',
+      'oneToMany',
+      'api::document.document'
+    >;
+    locale: Attribute.String;
+  };
+}
+
 export interface ApiHeroSectionHeroSection extends Schema.SingleType {
   collectionName: 'hero_sections';
   info: {
@@ -1224,6 +1285,70 @@ export interface ApiProjectProject extends Schema.CollectionType {
       'api::project.project',
       'oneToMany',
       'api::project.project'
+    >;
+    locale: Attribute.String;
+  };
+}
+
+export interface ApiReportReport extends Schema.CollectionType {
+  collectionName: 'reports';
+  info: {
+    singularName: 'report';
+    pluralName: 'reports';
+    displayName: 'Report';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    title: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    name: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
+    src: Attribute.Media &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
+    date: Attribute.Date &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::report.report',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::report.report',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::report.report',
+      'oneToMany',
+      'api::report.report'
     >;
     locale: Attribute.String;
   };
@@ -1750,9 +1875,11 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::about-us-section.about-us-section': ApiAboutUsSectionAboutUsSection;
       'api::contacts-section.contacts-section': ApiContactsSectionContactsSection;
+      'api::document.document': ApiDocumentDocument;
       'api::hero-section.hero-section': ApiHeroSectionHeroSection;
       'api::partner.partner': ApiPartnerPartner;
       'api::project.project': ApiProjectProject;
+      'api::report.report': ApiReportReport;
       'api::support-data.support-data': ApiSupportDataSupportData;
       'api::teammate.teammate': ApiTeammateTeammate;
       'api::veteran.veteran': ApiVeteranVeteran;
