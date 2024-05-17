@@ -1396,6 +1396,12 @@ export interface ApiSupportDataSupportData extends Schema.CollectionType {
       'oneToOne',
       'api::project.project'
     >;
+    currency: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
